@@ -28,8 +28,11 @@
       }
 
       .content-text {
+        line-height: 2rem;
+        // letter-spacing: 1px;
         margin: 2rem 0;
-        font-size: 1.2rem;
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
         color: #fefefe;
         @media (max-width: 768px) {
           font-size: 1rem;
@@ -37,16 +40,19 @@
       }
 
       #join-button {
-        background: #fefefe;
-        padding: 0.4rem 1.4rem;
-        border: 1px solid $color-primary;
-        border-radius: 50px;
-        font-size: 1rem;
+        background: #4285f4;
+        letter-spacing: 1px;
+        padding: 0.8rem 1.6rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
         transition: background-color 0.2s, color 0.2s;
         transition-timing-function: ease-in-out;
+        color: #fff;
+        
 
         &:hover {
           background: transparent;
+          border:1px solid white;
           color: #fefefe;
         }
 
@@ -87,7 +93,7 @@
           margin-right: 0.5rem;
   
           .list-icon {
-            color: $color-secondary;
+            color: #4285f4;
             font-size: 2rem;
   
             @media (max-width: 768px) {
