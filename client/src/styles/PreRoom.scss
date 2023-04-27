@@ -80,20 +80,21 @@
     justify-content: center;
 
     #join-button {
-      background: #fefefe;
-      color: $color-secondary;
-      padding: 0.4rem 1.4rem;
-      border: 1px solid $color-primary;
-      border-radius: 50px;
-      font-size: 1.4rem;
-      transition: background-color 0.2s, color 0.2s;
-      transition-timing-function: ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        background: transparent;
-        color: #fefefe;
-      }
+      background: #4285f4;
+        letter-spacing: 1px;
+        padding: 0.8rem 1.6rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        transition: background-color 0.2s, color 0.2s;
+        transition-timing-function: ease-in-out;
+        color: #fff;
+      
+      
+        &:hover {
+          background: transparent;
+          border: 1px solid white;
+          color: #fefefe;
+        }
 
       @media (max-width: 600px) {
         display: inline-block;

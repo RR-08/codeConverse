@@ -12,14 +12,14 @@ function Showcase() {
           <a href={`/room/${uuidv4()}`} id="join-button" >Join Meeting</a>
         </div>
         <div className="about-area">
-          <h1 className="about-title">Features of AirConf</h1>
+          <h1 className="about-title">Features of Code Converse</h1>
           <ul style={{padding: '2rem 0'}}>
             <li className="about-item">
               <div className="list-icon-area">
                 <i className="fas fa-tv list-icon"></i>
               </div>
               <p className="list-text">
-                Enter into a video call anytime without the hassles of logging in
+                Enter into a video call anytime <br/> 24 x 7
               </p>
             </li>
             <li className="about-item">
@@ -27,7 +27,7 @@ function Showcase() {
                 <i className="fas fa-users list-icon"></i>
               </div>
               <p className="list-text">
-                Organize a meeting with multiple people on high-quality video call
+                Organize a meeting with<br/> multiple people 
               </p>
             </li>
             <li className="about-item">
@@ -35,7 +35,7 @@ function Showcase() {
                 <i className="fas fa-comment-dots list-icon"></i>
               </div>
               <p className="list-text">
-                Chat and share your thoughts with each other while on the call
+                Chat and share your thoughts <br/> realtime
               </p>
             </li>
           </ul>
