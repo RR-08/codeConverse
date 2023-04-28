@@ -47,6 +47,10 @@ function Video({ video: { id, username, stream }, socket, userId }) {
                 {isAudio ? (<Mic style={{color: 'white', fontSize: '14px'}} />) : (<MicOff style={{color: 'white', fontSize: '14px'}} />)}
               </IconButton>
             </Tooltip>
+            {isVideo && (
+            <div className="user-name">
+                <div className="username">{username}</div>
+              </div>)}
           </div>
           {!isVideo && (
             <>

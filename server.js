@@ -37,15 +37,35 @@ app.use('/peerjs', peerServer);
     res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
   })
 // }
+const userSocketMap = {};
+function getAllConnectedClients(roomId) {
+  // Map
+  return Array.from(io.sockets.adapter.rooms.get(roomId) || []).map(
+      (socketId) => {
+          return {
+              socketId,
+              username: userSocketMap[socketId],
+          };
+      }
+  );
+}
 io.on('connection', (socket) => {
   console.log("Connected");
   let currUserId, currUserName, currRoom;
 
   socket.on("join-room", (roomId, id, username) => {
-    console.log(roomId, id, username);
+    // console.log(roomId, id, username);
+    userSocketMap[socket.id] = username;
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", id, username);
-
+    const clients = getAllConnectedClients(roomId);
+        clients.forEach(({ socketId }) => {
+            io.to(socketId).emit("joined", {
+                clients,
+                username,
+                socketId: socket.id,
+            });
+        });
     currUserId = id;
     currUserName = username;
     currRoom = roomId;
@@ -69,6 +89,14 @@ io.on('connection', (socket) => {
     socket.on("message-sent", (username, message) => {
       socket.to(roomId).emit("message", username, message);
     });
+    
+    socket.on("code-change", ({ roomId, code }) => {
+      socket.in(roomId).emit("code-change", { code });
+  });
+
+  // socket.on("sync-code", ({ roomId, code }) => {
+  //     io.to(roomId).emit("code-change", { code });
+  // });
   });
 
   socket.on('disconnect', () => {

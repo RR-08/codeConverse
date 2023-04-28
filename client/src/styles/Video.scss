@@ -24,6 +24,16 @@
 
     .info-header {
       text-align: right;
+      .user-name{
+        position: absolute;
+        bottom: 8px;
+        left: 12px;
+        color: $color-primary;
+        // font-family: $main-font;
+        font-weight: 300;
+        padding-bottom: 4px;
+        // padding: 0.4rem 0.8rem;
+      }
     }
 
     .user-icon {

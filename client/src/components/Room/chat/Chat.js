@@ -48,7 +48,7 @@ function Chat({ socket, open, setChatOpen }) {
           </div>
           <div className="chat-area">
             <div className="messages-main-area" ref={chatRef}>
-              {messages.map(message => <Message message={message} />)}
+              {messages.map((message,index) => <Message key={index} message={message} />)}
             </div>
           </div>
           <div className="bottom-area">
