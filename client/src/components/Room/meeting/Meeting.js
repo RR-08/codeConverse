@@ -10,11 +10,9 @@ import Video from "./Video";
 import Editor from "../Editor";
 
 function Meeting({ socket, chatOpen, videos, roomId, userId }) {
-  // const codeRef = useRef(null);
   const location = useLocation();
 
   const [notificationOpen, setNotificationOpen] = useState(false);
-  // const [clients, setClients] = useState([]);
   const { width } = useWindowDimensions();
 
   const copyRoomId = () => {
@@ -35,17 +33,6 @@ function Meeting({ socket, chatOpen, videos, roomId, userId }) {
 
     setNotificationOpen(false);
   };
-  socket?.on("joined", ({  username, socketId }) => {
-    if (username !== location.state?.username) {
-      // toast.success(`${username} joined the room.`);
-      console.log(`${username} joined`);
-    }
-    // setClients(clients);
-    // socket.emit("sync-code", {
-    //   code: codeRef.current,
-    //   socketId,
-    // });
-  });
 
   return (
     <>
@@ -61,9 +48,6 @@ function Meeting({ socket, chatOpen, videos, roomId, userId }) {
               <Share style={{ color: "#ddacf5" }} />
             </IconButton>
           </Tooltip>
-          {/* <div className="room-id-area">
-            <h3 className="room-id">Click to copy</h3>
-          </div> */}
         </div>
         <div className="videos-area">
           <Grid
@@ -84,9 +68,6 @@ function Meeting({ socket, chatOpen, videos, roomId, userId }) {
           <Editor
             socket={socket}
             roomId={roomId}
-            // onCodeChange={(code) => {
-            //   codeRef.current = code;
-            // }}
           />
         </div>
       </div>
