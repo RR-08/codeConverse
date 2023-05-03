@@ -91,15 +91,15 @@ function PreRoom({ setIsRoomActive }) {
               <div className="inner-stream-buttons-area">
                 <div className="icon-container">
                   <Tooltip title={isVideo ? "Video On" : "Video Off"}>
-                    <IconButton style={{background: isVideo ? '#64379f' : 'red'}} disabled={!stream} onClick={onToggleVideo}>
-                      {isVideo ? (<Videocam fontSize="small" style={{color: '#ddacf5'}} />) : (<VideocamOff fontSize="small" style={{color: '#ddacf5'}} />)}
+                    <IconButton style={{background: isVideo ? '#0F9D58' : '#DB4437'}} disabled={!stream} onClick={onToggleVideo}>
+                      {isVideo ? (<Videocam fontSize="small" style={{color: '#fff'}} />) : (<VideocamOff fontSize="small" style={{color: '#fff'}} />)}
                     </IconButton>
                   </Tooltip>
                 </div>
                 <div className="icon-container">
                   <Tooltip title={isAudio ? "Mic On" : "Mic Off"}>
-                    <IconButton style={{background: isAudio ? '#64379f' : 'red'}} disabled={!stream} onClick={onToggleAudio}>
-                      {isAudio ? (<Mic fontSize="small" style={{color: '#ddacf5'}} />) : (<MicOff fontSize="small" style={{color: '#ddacf5'}} />)}
+                    <IconButton style={{background: isAudio ? '#0F9D58' : '#DB4437'}} disabled={!stream} onClick={onToggleAudio}>
+                      {isAudio ? (<Mic fontSize="small" style={{color: '#fff'}} />) : (<MicOff fontSize="small" style={{color: '#fff'}} />)}
                     </IconButton>
                   </Tooltip>
                 </div>

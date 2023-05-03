@@ -7,8 +7,8 @@ function Showcase() {
     <div className="showcase-area">
       <div className="content-area">
         <div className="join-area">
-          <h1 className="content-title">Fast Conference Meetings. From Anytime and Anywhere.</h1>
-          <p className="content-text">Enjoy fast video meetings and chat with your friends, teams and family without the hassle of logging in. And that too for free!!</p>
+          <h1 className="content-title">Code and Converse Anytime Anywhere</h1>
+          <p className="content-text">Enjoy fast video meetings, code and chat with your friends, teams and family without the hassle of logging in. And that too for free!!</p>
           <a href={`/room/${uuidv4()}`} id="join-button" >Join Meeting</a>
         </div>
         <div className="about-area">

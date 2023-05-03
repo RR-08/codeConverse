@@ -61,9 +61,9 @@ function Meeting({ socket, chatOpen, videos, roomId, userId }) {
               <Share style={{ color: "#ddacf5" }} />
             </IconButton>
           </Tooltip>
-          <div className="room-id-area">
-            <h3 className="room-id">{roomId}</h3>
-          </div>
+          {/* <div className="room-id-area">
+            <h3 className="room-id">Click to copy</h3>
+          </div> */}
         </div>
         <div className="videos-area">
           <Grid
