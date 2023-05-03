@@ -3,7 +3,7 @@
 ## **Code and call from anywhere anytime**
 
 
-# Features of AirConf
+# Features of CodeConverse
 
 - ### Enter into a video call anytime without the hassles of logging in
 - ### Organize a meeting with multiple people on high-quality video call
