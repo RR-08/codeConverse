@@ -2,6 +2,8 @@
 
 .preroom-main-area {
   padding: 2rem 0;
+  background: url('../images/bg1.png') center center/cover no-repeat;
+  
 
   .username-area {
     display: flex;
@@ -88,12 +90,16 @@
         transition: background-color 0.2s, color 0.2s;
         transition-timing-function: ease-in-out;
         color: #fff;
+        border: none;
       
       
         &:hover {
           background: transparent;
-          border: 1px solid white;
           color: #fefefe;
+          background-color: #2a2a72;
+          background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+          border: none;
+          cursor: pointer;
         }
 
       @media (max-width: 600px) {

@@ -6,7 +6,7 @@ function Navbar() {
     <div id="navbar">
       <div className="container">
         <div className="nav-inner">
-          <a href="/" id="nav-logo">Code Converse</a>
+          <a href="/" id="nav-logo">&#60;Code/Converse&#62;</a>
           <div id="menu">
             <ul className="menu-list">
               <li className="menu-item">

@@ -97,16 +97,16 @@ function BottomMenu({
             <div className="icon-container">
               <Tooltip title={isVideo ? "Video On" : "Video Off"}>
                 <IconButton
-                  style={{ background: isVideo ? "#ddacf5" : "red" }}
+                  style={{ background: isVideo ? "#0F9D58" : "red" }}
                   disabled={!stream}
                   onClick={onToggleVideo}
                 >
                   {isVideo ? (
-                    <Videocam fontSize="small" style={{ color: "#64379f" }} />
+                    <Videocam fontSize="small" style={{ color: "#fff" }} />
                   ) : (
                     <VideocamOff
                       fontSize="small"
-                      style={{ color: "#ddacf5" }}
+                      style={{ color: "#fff" }}
                     />
                   )}
                 </IconButton>
@@ -117,14 +117,14 @@ function BottomMenu({
             <div className="icon-container">
               <Tooltip title={isAudio ? "Mic On" : "Mic Off"}>
                 <IconButton
-                  style={{ background: isAudio ? "#ddacf5" : "red" }}
+                  style={{ background: isAudio ? "#0F9D58" : "red" }}
                   disabled={!stream}
                   onClick={onToggleAudio}
                 >
                   {isAudio ? (
-                    <Mic fontSize="small" style={{ color: "#64379f" }} />
+                    <Mic fontSize="small" style={{ color: "#fff" }} />
                   ) : (
-                    <MicOff fontSize="small" style={{ color: "#ddacf5" }} />
+                    <MicOff fontSize="small" style={{ color: "#fff" }} />
                   )}
                 </IconButton>
               </Tooltip>
@@ -134,10 +134,10 @@ function BottomMenu({
             <div className="icon-container">
               <Tooltip title={`${chatOpen ? "Close" : "Open"} Chat`}>
                 <IconButton
-                  style={{ background: "#ddacf5" }}
+                  style={{ background: "#0F9D58" }}
                   onClick={() => setChatOpen(!chatOpen)}
                 >
-                  <Forum fontSize="small" style={{ color: "#64379f" }} />
+                  <Forum fontSize="small" style={{ color: "#fff" }} />
                 </IconButton>
               </Tooltip>
             </div>
@@ -147,10 +147,10 @@ function BottomMenu({
               <Tooltip title="Leave Meeting">
                 <IconButton
                   href={window.location.href}
-                  style={{ background: "#ddacf5" }}
+                  style={{ background: "#0F9D58" }}
                   onClick={() => handleLeaveBtn()}
                 >
-                  <ExitToApp fontSize="small" style={{ color: "#64379f" }} />
+                  <ExitToApp fontSize="small" style={{ color: "#fff" }} />
                 </IconButton>
               </Tooltip>
             </div>
