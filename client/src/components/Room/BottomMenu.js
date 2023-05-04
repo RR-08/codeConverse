@@ -38,7 +38,6 @@ function BottomMenu({
     }
 
     setNotificationOpen(false);
-    // setDisconnectedUser('');
   };
   const onToggleVideo = () => {
     if (!isVideo) {

@@ -63,7 +63,6 @@ function PreRoom({ setIsRoomActive }) {
       setError("Username should be between 3 and 24 characters long");
       return;
     }
-
     setError("");
     setIsRoomActive(true);
   }

@@ -13,18 +13,6 @@ const io = new Server(server, {
   },
 });
 
-// Serve static assets if in production
-// if (process.env.NODE_ENV === 'production') {
-//   // For Heroku redirection to secured layer connection in production
-//   app.use((req, res, next) => {
-//     if (req.header('x-forwarded-proto') !== 'https') {
-//       res.redirect(`https://${req.header('host')}${req.url}`);
-//     }
-//     else {
-//       next();
-//     }
-//   });
-
 const peerServer = ExpressPeerServer(server, {
   debug: true
 });
@@ -54,7 +42,6 @@ io.on('connection', (socket) => {
   let currUserId, currUserName, currRoom;
 
   socket.on("join-room", (roomId, id, username) => {
-    // console.log(roomId, id, username);
     userSocketMap[socket.id] = username;
     socket.join(roomId);
     socket.to(roomId).emit("user-connected", id, username);
@@ -94,9 +81,6 @@ io.on('connection', (socket) => {
       socket.in(roomId).emit("code-change", { code });
   });
 
-  // socket.on("sync-code", ({ roomId, code }) => {
-  //     io.to(roomId).emit("code-change", { code });
-  // });
   });
 
   socket.on('disconnect', () => {
